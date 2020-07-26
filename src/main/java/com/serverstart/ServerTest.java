@@ -1,5 +1,6 @@
 package com.serverstart;
 
+import com.netty.EchoServer;
 import com.netty.TimeServer;
 
 public class ServerTest {
@@ -9,6 +10,8 @@ public class ServerTest {
         if(args != null && args.length > 0){
             port = Integer.valueOf(args[0]);
         }
+
         new TimeServer().bind(port);
+        new EchoServer().bind(port);
     }
 }

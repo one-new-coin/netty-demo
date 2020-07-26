@@ -1,7 +1,7 @@
 package com.clientstart;
 
+import com.netty.EchoClient;
 import com.netty.TimeClient;
-import com.netty.TimeServer;
 
 public class ClientTest {
 
@@ -11,6 +11,7 @@ public class ClientTest {
             port = Integer.valueOf(args[0]);
         }
         System.out.println(System.getProperty("line.separator"));
-        new TimeClient().connect(port,"127.0.0.1");
+        //new TimeClient().connect(port,"127.0.0.1");
+        new EchoClient().connect(port,"127.0.0.1");
     }
 }
