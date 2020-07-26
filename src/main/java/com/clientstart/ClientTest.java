@@ -10,6 +10,7 @@ public class ClientTest {
         if(args != null && args.length > 0){
             port = Integer.valueOf(args[0]);
         }
+        System.out.println(System.getProperty("line.separator"));
         new TimeClient().connect(port,"127.0.0.1");
     }
 }
